@@ -122,13 +122,6 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
             <block type="looks_hide"/>
         ${blockSeparator}
             <block type="looks_gotofrontback"/>
-            <block type="looks_goforwardbackwardlayers">
-                <value name="NUM">
-                    <shadow type="math_integer">
-                        <field name="NUM">1</field>
-                    </shadow>
-                </value>
-            </block>
         `}
         ${isStage ? `
             <block id="backdropnumbername" type="looks_backdropnumbername"/>
@@ -246,14 +239,6 @@ const control = function (isInitialSetup, isStage, targetId, colors) {
         id="control"
         colour="${colors.primary}"
         secondaryColour="${colors.tertiary}">
-        <block type="control_wait">
-            <value name="DURATION">
-                <shadow type="math_positive_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-        </block>
-        ${blockSeparator}
         <block type="control_repeat">
             <value name="TIMES">
                 <shadow type="math_whole_number">
@@ -262,22 +247,8 @@ const control = function (isInitialSetup, isStage, targetId, colors) {
             </value>
         </block>
         <block id="forever" type="control_forever"/>
-        ${blockSeparator}
-        <block type="control_if"/>
-        <block type="control_if_else"/>
-        <block id="wait_until" type="control_wait_until"/>
+                    ${blockSeparator}
         <block id="repeat_until" type="control_repeat_until"/>
-        ${blockSeparator}
-        <block type="control_stop"/>
-        ${blockSeparator}
-        ${isStage ? `
-            <block type="control_create_clone_of">
-                <value name="CLONE_OPTION">
-                    <shadow type="control_create_clone_of_menu"/>
-                </value>
-            </block>
-        ` : `
-            <block type="control_start_as_clone"/>
             <block type="control_create_clone_of">
                 <value name="CLONE_OPTION">
                     <shadow type="control_create_clone_of_menu"/>
@@ -318,11 +289,7 @@ const sensing = function (isInitialSetup, isStage, targetId, colors) {
                     <shadow type="colour_picker"/>
                 </value>
             </block>
-            <block type="sensing_distanceto">
-                <value name="DISTANCETOMENU">
-                    <shadow type="sensing_distancetomenu"/>
-                </value>
-            </block>
+            
             ${blockSeparator}
         `}
         ${isInitialSetup ? '' : `
