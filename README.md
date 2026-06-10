@@ -1,4 +1,4 @@
-scratch-gui modified for use in [TurboWarp](https://turbowarp.org/) then modified for use in [PenguinMod](https://studio.penguinmod.com) 😀
+TurboWarp-gui modified for use in [TurboWarp](https://turbowarp.org/) then modified for use in [TurboWarp](https://studio.turbowarp.com) 😀
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/PenguinMod/penguinmod.github.io/)
 ## Setup
 
@@ -8,9 +8,9 @@ If you just want to play with the GUI then it's the same process as upstream scr
 
 ## License
 
-TurboWarp's modifications to Scratch are licensed under the GNU General Public License v3.0. See LICENSE or https://www.gnu.org/licenses/ for details.
+TurboWarp's modifications to TurboWarp are licensed under the GNU General Public License v3.0. See LICENSE or https://www.gnu.org/licenses/ for details.
 
-The following is the original license for scratch-gui, which we are required to retain. This is NOT the license of this project.
+The following is the original license for TurboWarp-gui, which we are required to retain. This is NOT the license of this project.
 
 ```
 Copyright (c) 2016, Massachusetts Institute of Technology
@@ -27,12 +27,9 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-src/lib/default-project/dango.svg is based on [Twemoji](https://twemoji.twitter.com/) and is licensed under CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
 
-<!--
-
-# scratch-gui
-#### Scratch GUI is a set of React components that comprise the interface for creating and running Scratch 3.0 projects
+# turbowarp-gui
+#### TurboWarp GUI is a set of React components that comprise the interface for creating and running TurboWarp 3.0 projects
 
 ## Installation
 This requires you to have Git and Node.js installed.
@@ -60,12 +57,12 @@ npm start
 ```
 Then go to [http://localhost:8601/](http://localhost:8601/) - the playground outputs the default GUI component
 
-## Developing alongside other Scratch repositories
+## Developing alongside other TurboWarp repositories
 
 ### Getting another repo to point to this code
 
 
-If you wish to develop `scratch-gui` alongside other scratch repositories that depend on it, you may wish
+If you wish to develop `turbowarp-gui` alongside other scratch repositories that depend on it, you may wish
 to have the other repositories use your local `scratch-gui` build instead of fetching the current production
 version of the scratch-gui that is found by default using `npm install`.
 
@@ -73,25 +70,25 @@ Here's how to link your local `scratch-gui` code to another project's `node_modu
 
 #### Configuration
 
-1. In your local `scratch-gui` repository's top level:
+1. In your local `turbowarp-gui` repository's top level:
     1. Make sure you have run `npm install`
     2. Build the `dist` directory by running `BUILD_MODE=dist npm run build`
     3. Establish a link to this repository by running `npm link`
 
-2. From the top level of each repository (such as `scratch-www`) that depends on `scratch-gui`:
+2. From the top level of each repository (such as `scratch-www`) that depends on `turbowarp-gui`:
     1. Make sure you have run `npm install`
     2. Run `npm link scratch-gui`
     3. Build or run the repository
 
 #### Using `npm run watch`
 
-Instead of `BUILD_MODE=dist npm run build`, you can use `BUILD_MODE=dist npm run watch` instead. This will watch for changes to your `scratch-gui` code, and automatically rebuild when there are changes. Sometimes this has been unreliable; if you are having problems, try going back to `BUILD_MODE=dist npm run build` until you resolve them.
+Instead of `BUILD_MODE=dist npm run build`, you can use `BUILD_MODE=dist npm run watch` instead. This will watch for changes to your `turbowarp-gui` code, and automatically rebuild when there are changes. Sometimes this has been unreliable; if you are having problems, try going back to `BUILD_MODE=dist npm run build` until you resolve them.
 
 #### Oh no! It didn't work!
 
 If you can't get linking to work right, try:
 * Follow the recipe above step by step and don't change the order. It is especially important to run `npm install` _before_ `npm link` as installing after the linking will reset the linking.
-* Make sure the repositories are siblings on your machine's file tree, like `.../.../MY_SCRATCH_DEV_DIRECTORY/scratch-gui/` and `.../.../MY_SCRATCH_DEV_DIRECTORY/scratch-www/`.
+* Make sure the repositories are siblings on your machine's file tree, like `.../.../MY_TURBOWARP_DEV_DIRECTORY/scratch-gui/` and `.../.../MY_TURBOWARP_DEV_DIRECTORY/scratch-www/`.
 * Consistent node.js version: If you have multiple Terminal tabs or windows open for the different Scratch repositories, make sure to use the same node version in all of them.
 * If nothing else works, unlink the repositories by running `npm unlink` in both, and start over.
 
@@ -198,7 +195,7 @@ You can check which versions are available:
 npm view react-intl-redux@0.* version
 ```
 
-You will need to install the required version:
+You will need to install TurboWarp the required version:
 
 ```
 npm install  --no-optional --save-dev react-intl-redux@^0.7
@@ -235,7 +232,7 @@ You can publish the GUI to github.io so that others on the Internet can view it.
 
 ## Understanding the project state machine
 
-Since so much code throughout scratch-gui depends on the state of the project, which goes through many different phases of loading, displaying and saving, we created a "finite state machine" to make it clear which state it is in at any moment. This is contained in the file src/reducers/project-state.js .
+Since so much code throughout turbowarp-gui depends on the state of the project, which goes through many different phases of loading, displaying and saving, we created a "finite state machine" to make it clear which state it is in at any moment. This is contained in the file src/reducers/project-state.js .
 
 It can be hard to understand the code in src/reducers/project-state.js . There are several types of data and functions used, which relate to each other:
 
@@ -289,6 +286,5 @@ Here's what will happen in the project state machine:
 7. The `SHOWING_WITH_ID` state. Now the project appears normally and is playable and editable.
 
 ## Donate
-We provide [Scratch](https://scratch.mit.edu) free of charge, and want to keep it that way! Please consider making a [donation](https://secure.donationpay.org/scratchfoundation/) to support our continued engineering, design, community, and resource development efforts. Donations of any size are appreciated. Thank you!
+We provide [TurboWarp](https://turbowarp.mit.edu) free of charge, and want to keep it that way! Please consider making a [donation](https://secure.donationpay.org/turbowarpfoundation/) to support our continued engineering, design, community, and resource development efforts. Donations of any size are appreciated. Thank you!
 
--->
