@@ -1,8 +1,7 @@
-       case '\'': return '&apos;';
-        case '"': return '&quot;';
-        }
-    });
+   import LazyScratchBlocks from './tw-lazy-scratch-blocks';
+import {defaultBlockColors} from './themes';
 };
+
 
 const looks = function (isInitialSetup, isStage, targetId, costumeName, backdropName, colors) {
     const hello = ScratchBlocks.ScratchMsgs.translate('LOOKS_HELLO', 'Hello!');
