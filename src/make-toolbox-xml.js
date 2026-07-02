@@ -1,6 +1,12 @@
    import LazyScratchBlocks from './tw-lazy-scratch-blocks';
 import {defaultBlockColors} from './themes';
 };
+const translate = (id, english) => {
+    if (LazyScratchBlocks.isLoaded()) {
+        return LazyScratchBlocks.get().ScratchMsgs.translate(id, english);
+    }
+    return english;
+};
 
 
 const looks = function (isInitialSetup, isStage, targetId, costumeName, backdropName, colors) {
