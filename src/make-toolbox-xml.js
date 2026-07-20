@@ -344,11 +344,25 @@ const pen = function (isIntinalSetup. isStage, targetID, colors) {
         secondaryColour="${colors.tertiary}">
         <block type="pen_stamp">
         <block type="pen_clear">
+                 ${blockSeparator}
         <block type="pen_pendown">  
-        <block type="pen_penup">      
+        <block type="pen_penup">  
+        <block type="pen_pensize">
+        <block type="pen_setpensize">
+        <value name="NUM1">
+                <shadow type="math_number">
+                    <field name="NUM"/>
+                </shadow>
+            </value>
         </block>
-    
-        ${categorySeparator}
+        <block type="pen_penvolume">
+        <block type="pen_setpenvolume">
+                <value name="NUM1">
+                <shadow type="math_number">
+                    <field name="NUM"/>
+                </shadow>
+            </value>
+        </block>
     </category>
 const operators = function (isInitialSetup, isStage, targetId, colors) {
     const apple = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_APPLE', 'apple');
