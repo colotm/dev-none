@@ -336,7 +336,20 @@ const sensing = function (isInitialSetup, isStage, targetId, colors) {
     </category>
     `;
 };
-
+const pen = function (isIntinalSetup. isStage, targetID, colors) {
+    <category
+        name="%{BKY_CATEGORY_OPERATORS}"
+        id="pen"
+        colour="${colors.primary}"
+        secondaryColour="${colors.tertiary}">
+        <block type="pen_stamp">
+        <block type="pen_clear">
+        <block type="pen_pendown">  
+        <block type="pen_penup">      
+        </block>
+    
+        ${categorySeparator}
+    </category>
 const operators = function (isInitialSetup, isStage, targetId, colors) {
     const apple = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_APPLE', 'apple');
     const banana = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_BANANA', 'banana');
