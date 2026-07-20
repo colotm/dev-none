@@ -337,7 +337,7 @@ const sensing = function (isInitialSetup, isStage, targetId, colors) {
     `;
 };
 
-const pen = function (isIntinalSetup. isStage, targetID, colors) {
+const pen = function (isIntinalSetup, isStage, targetID, colors) {
     <category
         name="%{BKY_CATEGORY_OPERATORS}"
         id="pen"
@@ -577,6 +577,7 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
     const eventsXML = moveCategory('event') || events(isInitialSetup, isStage, targetId, colors.event);
     const controlXML = moveCategory('control') || control(isInitialSetup, isStage, targetId, colors.control);
     const sensingXML = moveCategory('sensing') || sensing(isInitialSetup, isStage, targetId, colors.sensing);
+    const penXML = moveCategory('sensing') || sensing(isInitialSetup, isStage, targetId, colors.sensing);
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId, colors.operators);
     const variablesXML = moveCategory('data') || variables(isInitialSetup, isStage, targetId, colors.data);
 
@@ -587,6 +588,7 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
         eventsXML, gap,
         controlXML, gap,
         sensingXML, gap,
+        penXML, gap,
         operatorsXML, gap,
         variablesXML, gap,
     ];
