@@ -338,6 +338,7 @@ const sensing = function (isInitialSetup, isStage, targetId, colors) {
 };
 
 const pen = function (isIntinalSetup, isStage, targetID, colors) {
+return `
     <category
         name="%{BKY_CATEGORY_OPERATORS}"
         id="pen"
