@@ -366,6 +366,8 @@ const pen = function (isIntinalSetup. isStage, targetID, colors) {
             </value>
         </block>
     </category>
+    `;
+};
 const operators = function (isInitialSetup, isStage, targetId, colors) {
     const apple = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_APPLE', 'apple');
     const banana = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_BANANA', 'banana');
