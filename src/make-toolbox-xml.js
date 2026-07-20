@@ -346,7 +346,8 @@ const pen = function (isIntinalSetup. isStage, targetID, colors) {
         <block type="pen_clear">
                  ${blockSeparator}
         <block type="pen_pendown">  
-        <block type="pen_penup">  
+        <block type="pen_penup">
+                         ${blockSeparator}
         <block type="pen_pensize">
         <block type="pen_setpensize">
         <value name="NUM1">
@@ -355,6 +356,7 @@ const pen = function (isIntinalSetup. isStage, targetID, colors) {
                 </shadow>
             </value>
         </block>
+                         ${blockSeparator}
         <block type="pen_penvolume">
         <block type="pen_setpenvolume">
                 <value name="NUM1">
